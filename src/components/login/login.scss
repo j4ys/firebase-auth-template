@@ -1,0 +1,191 @@
+// body {
+//   // background: linear-gradient(var(--dark1), var(--light));
+
+//   background-image: url("https://picsum.photos/1080/768");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+// }
+
+.page-content {
+  &.login-page {
+    background-image: url(/images/login-page-screen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  display: flex;
+  flex-wrap: wrap;
+  .page-section {
+    width: 50%;
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-basis: 400px;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-basis: 600px;
+      flex-grow: 1;
+      flex-shrink: 1;
+
+      > .login-form-container {
+        max-height: 700px;
+        background-color: #fff;
+        width: 500px;
+        padding: 40px;
+        border-radius: 4px;
+        align-self: center;
+        box-shadow: 5px 5px 15px rgb(0 0 0 / 30%);
+
+        .form-header {
+          font-family: "Fira Code";
+          font-weight: bold;
+          font-size: 30px;
+
+          .sub-header {
+            font-size: 15px;
+            display: block;
+            font-weight: 400;
+            margin: 20px 0;
+          }
+        }
+
+        > form {
+          height: 150px;
+          label {
+            font-family: "Roboto";
+            font-size: 13px;
+            color: gray;
+
+            input {
+              display: block;
+              width: 100%;
+              height: 20px;
+              line-height: 20px;
+              font-size: 20px;
+              border: none;
+              border-bottom: 0.5px solid #ccc;
+              margin: 5px 0;
+              outline: none;
+              padding: 5px 0;
+            }
+          }
+
+          button {
+            margin: 20px auto;
+            float: right;
+            padding: 10px;
+            border: none;
+            background-color: #1877f2;
+            color: white;
+            height: 15px;
+            border-radius: 25px;
+            min-width: 100px;
+            font-size: 13px;
+            font-weight: bold;
+            box-sizing: content-box;
+            cursor: pointer;
+          }
+        }
+
+        .login-divider {
+          display: flex;
+          .or-divider {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+            height: 30px;
+
+            &:after {
+              content: "";
+              width: 100%;
+              position: absolute;
+              border-top: 1px solid #ccc;
+              top: 50%;
+              z-index: 0;
+            }
+
+            .label {
+              padding: 0 10px;
+              z-index: 10;
+              background-color: white;
+              align-self: center;
+            }
+          }
+        }
+
+        .auth2-section {
+          .social-login-btns {
+            margin: 20px 0;
+
+            .login-btn {
+              width: 100%;
+              margin: 20px 0;
+
+              .btn {
+                background: red;
+                padding: 10px;
+                border: none;
+                outline: none;
+                width: 100%;
+                color: white;
+                font-weight: bold;
+                font-family: "Roboto";
+                border-radius: 25px;
+                cursor: pointer;
+              }
+              &.google-login {
+                .btn {
+                  border-color: #ccc;
+                  border-width: 2px;
+                  background-color: white;
+                  color: gray;
+                  border-style: solid;
+
+                  .btn-text {
+                    font-size: 15px;
+                    color: black;
+                    .btn-icon {
+                      margin: 0 15px;
+                      font-size: 1.2em;
+                    }
+                  }
+                }
+              }
+
+              &.facebook-login {
+                .btn {
+                  border-color: #1877f2;
+                  border-width: 2px;
+                  background-color: #1877f2;
+                  border-style: solid;
+
+                  .btn-text {
+                    font-size: 15px;
+                    .btn-icon {
+                      margin: 0 15px;
+                      font-size: 1.2em;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .brand-logo {
+      height: 150px;
+      background-color: white;
+      mask: url(/images/j4ys-auth2.svg) no-repeat center / contain;
+    }
+  }
+}
