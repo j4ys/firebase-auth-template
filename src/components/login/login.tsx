@@ -7,7 +7,7 @@ import './login.scss';
 export default function Login() {
   const navigate = useNavigate();
   const location: any = useLocation();
-  const {user, signIn, signOut}= AuthConsumer();
+  const {user, signIn}= AuthConsumer();
   const fromPath = location.state?.from?.pathname || '/dashboard';
 
   function handelFormSubmit(event: React.FormEvent<HTMLFormElement>) {
