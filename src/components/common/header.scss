@@ -1,0 +1,31 @@
+.navbar {
+  background-color: var(--lightest);
+  color: white;
+  height: 60px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  > .company-label {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  > ul.nav-items {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+
+    > li {
+      &.nav-item {
+        margin: 10px;
+        a {
+          color: white;
+          font-weight: normal;
+          font-size: 16px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
