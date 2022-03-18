@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthConsumer } from "../../contexts";
 
 export default function SingOut() {
-  const {user, signOut} = AuthConsumer();
+  const {signOut} = AuthConsumer();
   const navigate = useNavigate();
 
   
